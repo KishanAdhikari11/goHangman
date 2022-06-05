@@ -53,12 +53,6 @@ func Play(word string) {
 				tries += 1
 				fmt.Println(Hangmanpics(tries))
 				fmt.Println(blank)
-				fmt.Print("Remaining letters: ")
-				for i := 0; i < len(guessed_letters); i++ {
-					fmt.Print(guessed_letters[i])
-
-				}
-				fmt.Println()
 
 			} else {
 				guessed_letters = append(guessed_letters, guess)
