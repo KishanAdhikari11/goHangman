@@ -6,7 +6,22 @@ import (
 )
 
 func main() {
+	game.WelcomePlayer()
 	word := game.GetRandomWord()
-	fmt.Println(word)
+	game.Play(word)
+
+	for {
+		var choice string
+		fmt.Println("Do you want to play again (y/n)?")
+		fmt.Scanf("%s", &choice)
+		if choice == "y" {
+			word := game.GetRandomWord()
+			game.Play(word)
+
+		} else {
+			break
+		}
+
+	}
 
 }

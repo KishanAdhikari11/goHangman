@@ -9,8 +9,12 @@ import (
 	"time"
 )
 
-func GetRandomWord() string {
+func init() {
 	rand.Seed(time.Now().UnixNano())
+}
+
+func GetRandomWord() string {
+
 	words := []string{}
 	file, err := os.Open("words.txt")
 	if err != nil {
